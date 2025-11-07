@@ -1,17 +1,19 @@
-# 核心依赖
+# 核心深度学习框架
 torch==2.0.1
-torchtext==0.15.2
-torchvision==0.15.2  # 与torch版本对齐，避免依赖冲突
+torchtext==0.15.2  # 与 PyTorch 版本匹配，用于文本处理
 
-# 数据处理相关
-datasets==2.14.5  # 加载IWSLT2017数据集
-spacy==3.6.1  # 分词工具
+# 数据集加载
+datasets==2.14.5  # 加载 IWSLT2017 数据集
 
+# 分词工具
+spacy==3.6.1
+en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.6.0/en_core_web_sm-3.6.0-py3-none-any.whl
+de-core-news-sm @ https://github.com/explosion/spacy-models/releases/download/de_core_news_sm-3.6.0/de_core_news_sm-3.6.0-py3-none-any.whl
 
-# 可视化与日志
+# 可视化与进度条
 matplotlib==3.7.2  # 绘制训练曲线
-tqdm==4.66.1  # 进度条显示
+tqdm==4.66.1       # 显示训练进度
 
-# 基础工具
-numpy==1.24.3  # 数值计算（torch依赖）
-python-dateutil==2.8.2  # 日期处理（部分依赖间接引用）
+# 基础依赖
+numpy==1.24.3      # 数值计算（PyTorch 依赖）
+python-dateutil==2.8.2  # 日期处理（间接依赖）
